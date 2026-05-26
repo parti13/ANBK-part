@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Asesmen Sumatif Akhir Tahun - ANBK</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Asesmen Sumatif Akhir Tahun</h1>
+  <p>Mata Pelajaran: IPA | Kurikulum Merdeka | Kelas: SMP Kelas 7 | Durasi: 90 menit</p>
+</header>
+
+<div class="home">
+  <h2>Halaman Home</h2>
+  <label>Nama Siswa:</label><input id="nama" type="text">
+  <label>Kelas:</label><input id="kelas" type="text">
+  <label>NIS:</label><input id="nis" type="text">
+  <button class="btn" onclick="startExam()">Mulai Ujian</button>
+  <h3>Mode Guru</h3>
+  <input id="guruPass" type="password" placeholder="Password Guru">
+  <button class="btn" onclick="loginGuru()">Akses Guru</button>
+</div>
+
+<div class="container exam">
+  <div class="sidebar" id="sidebar"></div>
+  <div class="main">
+    <div class="timer" id="timer"></div>
+    <div class="question" id="question"></div>
+    <div class="options" id="options"></div>
+    <button onclick="toggleMark()">Tandai Ragu</button>
+    <div class="nav">
+      <button onclick="prevQuestion()">Previous</button>
+      <button onclick="nextQuestion()">Next</button>
+      <button onclick="submitExam()">Submit</button>
+    </div>
+  </div>
+</div>
+
+<div class="result">
+  <h2>Hasil Ujian</h2>
+  <div id="resultContent"></div>
+  <button class="btn" onclick="window.print()">Print</button>
+</div>
+
+<div class="guru">
+  <h2>Mode Guru</h2>
+  <button class="btn" onclick="addQuestion()">Tambah Soal</button>
+  <div id="guruContent"></div>
+</div>
+
+<div class="overlay" id="overlay">
+  <h1>JANGAN PINDAH TAB!</h1>
+  <p>Kembali dalam <span id="overlayTimer">10</span> detik atau ujian otomatis submit.</p>
+  <button onclick="returnToExam()">Kembali</button>
+</div>
+
+<script src="questions.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
