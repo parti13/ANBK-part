@@ -1,0 +1,21 @@
+body {font-family: Arial, sans-serif; margin:0; background:#f9f9f9; color:#333;}
+header {background:#004080; color:#fff; padding:15px; text-align:center;}
+.container {display:flex; height:100vh;}
+.sidebar {width:200px; background:#eee; overflow-y:auto; padding:10px;}
+.sidebar button {display:block; width:100%; margin:5px 0; padding:10px; border:none; cursor:pointer;}
+.sidebar button.answered {background:#4CAF50; color:#fff;}
+.main {flex:1; padding:20px; overflow-y:auto;}
+.question {margin-bottom:20px;}
+.options button {display:block; margin:5px 0; padding:10px; width:100%; border:1px solid #ccc; cursor:pointer;}
+.nav {margin-top:20px;}
+.nav button {margin-right:10px; padding:10px;}
+.timer {font-weight:bold; color:#d9534f;}
+.overlay {position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(255,0,0,0.9); color:#fff; display:none; justify-content:center; align-items:center; flex-direction:column; z-index:9999;}
+.overlay button {background:#4CAF50; color:#fff; padding:10px 20px; border:none; margin-top:20px; cursor:pointer;}
+.home, .exam, .result, .guru {display:none; padding:20px;}
+input, select {padding:10px; margin:5px 0; width:100%;}
+.btn {padding:10px 20px; background:#004080; color:#fff; border:none; cursor:pointer;}
+.btn:hover {background:#0066cc;}
+table {width:100%; border-collapse:collapse; margin-top:20px;}
+table, th, td {border:1px solid #ccc;}
+th, td {padding:10px; text-align:left;}
